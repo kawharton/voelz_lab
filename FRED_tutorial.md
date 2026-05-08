@@ -1,7 +1,5 @@
 # FRED Tutorial (G Quadruplex example)
 
-In order to dock with FRED, you need to prepare the receptor. If you are trying to dock into a pocket where a known ligand already docks, the best input file is one with the ligand still bound. 
-
 ## Installation
 1. Go to: https://www.eyesopen.com/customer-software-download
 2. Fill out the form
@@ -22,16 +20,19 @@ This site may be helpful for installation https://docs.eyesopen.com/applications
 
 ## Making A Receptor
 
+In order to dock with FRED, you need to prepare the receptor. If you are trying to dock into a pocket where a known ligand already docks, the best input file is one with the ligand still bound. 
+
 #### Open OEDOCKING GUI <br><br>
-a. File --> New --> Select PDB file of receptor with original ligand still bound --> click ok <br><br>
+a. File --> New --> Select 7N7D_model1_demo.pdb --> click ok <br><br>
 b. An option box appears. Click on Loop Building and deselect Build Missing Loops (**NOTE** This tutorial is specifically for G quadruplexes- For proteins, you may need to select different options)<br><br>
 c. Click Make OEDesignUnit <br><br>
 d. Wait for Spruce to run. A window will pop up that says Spruce ran successfully. Click ok <br><br>
-e. "Select DU to Make Receptor" window pops up. This screen is asking which bound ligand should define the docking site. Select which ligand should be used and click ok. <br><br>
-f. On the Shape screen, select the receptor as the target, the ligand selected above as the ligand, and any ligand that should be ignored as X. Leave counter ions. After changing one of the options, a new OEDU must be created. If next is grayed out, click Make OEDesignUnit which will rerun Spruce. <br><br>
-g. If the bounding box is satisfactory, click next, otherwise adjust. <br><br>
-h. Click Create Shape <br><br>
-i. Click save. <br><br>
+e. "Select DU to Make Receptor" window pops up. This screen is asking which bound ligand should define the docking site. Select BER-A102 as the ligand and click ok. <br><br>
+f. On the Box screen, switch BER-A101 from target to X. Leave the BER-A102 as the ligand and the protein as receptor. Leave counter ions. After changing one of the options, a new OEDU must be created. Click Make OEDesignUnit which will rerun Spruce. <br><br>
+g. Select Make OEDesginUnit and then click OK  
+h. On the shape screen, adjust the box so that the ligand is fully inside the box, but there is not too much space around it the ligand. Click Next <br><br>
+i. Click Create Shape <br><br>
+j. Click save. <br><br>
 
 ## Running FRED on the command line<br>
 ```fred -receptor 7n7d_site2_demo.oedu -dbase berberine.mol2 -docked_molecule_file fred_output.oeb```
