@@ -31,8 +31,8 @@ e. "Select DU to Make Receptor" window pops up. This screen is asking which boun
 f. On the Box screen, switch BER-A101 from target to X. Leave the BER-A102 as the ligand and the protein as receptor. Leave counter ions. After changing one of the options, a new OEDU must be created. Click Make OEDesignUnit which will rerun Spruce. <br><br>
 g. Select Make OEDesginUnit and then click OK <br><br>
 h. On the shape screen, adjust the box so that the ligand is fully inside the box, but there is not too much space around it the ligand. Be sure to click and drag to make sure the protein is enclosed by the box to your satisfaction. Click Next <br><br>
-i. Click Create Shape <br><br>
-j. Click save. <br><br>
+i. Click Create Shape. <br><br>
+j. Save the receptor. <br><br>
 
 ## Running FRED on the command line<br>
 ```fred -receptor 7n7d_site2_demo.oedu -dbase berberine.mol2 -docked_molecule_file fred_output.oeb```
